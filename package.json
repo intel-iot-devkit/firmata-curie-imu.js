@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/hybridgroup/firmata-curie-imu.js/issues"
   },
-  "homepage": "https://github.com/hybridgroup/firmata-curie-imu.js#readme"
+  "homepage": "https://github.com/hybridgroup/firmata-curie-imu.js#readme",
+  "dependencies": {
+    "firmata": "^0.9.0"
+  }
 }
