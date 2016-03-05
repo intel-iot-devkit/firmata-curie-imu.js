@@ -1,0 +1,24 @@
+{
+  "name": "firmata-curie-js",
+  "version": "0.0.1",
+  "description": "Example for how to use FirmataCurieIMU from JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hybridgroup/firmata-curie-imu.js.git"
+  },
+  "keywords": [
+    "curie",
+    "arduino101",
+    "genuino101"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hybridgroup/firmata-curie-imu.js/issues"
+  },
+  "homepage": "https://github.com/hybridgroup/firmata-curie-imu.js#readme"
+}
