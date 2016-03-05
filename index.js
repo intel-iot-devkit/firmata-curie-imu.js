@@ -1,3 +1,6 @@
+var CURIE_IMU = 0x11,
+    CURIE_IMU_READ_ACCEL = 0x00;
+
 var Board = require("firmata");
 
 Board.requestPort(function(error, port) {
@@ -15,9 +18,16 @@ Board.requestPort(function(error, port) {
     var state = 1;
 
     board.pinMode(pin, board.MODES.OUTPUT);
+    board.sysexResponse(CURIE_IMU, function(data) {
+      var subcommand = data.shift();
+      if (subcommand === CURIE_IMU_READ_ACCEL) {
+        console.log("CURIE_IMU_READ_ACCEL", Board.decode(data));
+      }
+    });
 
     setInterval(function() {
       board.digitalWrite(pin, (state ^= 1));
+      board.sysexCommand([CURIE_IMU, CURIE_IMU_READ_ACCEL]);
     }, 500);
   });
 });
