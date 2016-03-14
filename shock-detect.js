@@ -29,6 +29,6 @@ Board.requestPort(function(error, port) {
 
       // disable shock detection
       board.sysexCommand([CURIE_IMU, CURIE_IMU_SHOCK_DETECT, 0]);
-    }, 5000);
+    }, 30000);
   });
 });

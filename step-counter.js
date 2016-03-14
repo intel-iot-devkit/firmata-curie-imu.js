@@ -29,6 +29,6 @@ Board.requestPort(function(error, port) {
 
       // disable step counting
       board.sysexCommand([CURIE_IMU, CURIE_IMU_STEP_COUNTER, 0]);
-    }, 5000);
+    }, 30000);
   });
 });
