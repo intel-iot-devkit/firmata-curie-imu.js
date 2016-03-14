@@ -21,7 +21,12 @@ Board.requestPort(function(error, port) {
       }
     });
 
-    // enable shock detection
+    // enable step counting
     board.sysexCommand([CURIE_IMU, CURIE_IMU_STEP_COUNTER, 1]);
+
+    setTimeout(function() {
+      console.log("Done.");
+      board.sysexCommand([CURIE_IMU, CURIE_IMU_STEP_COUNTER, 0]);
+    }, 5000);
   });
 });

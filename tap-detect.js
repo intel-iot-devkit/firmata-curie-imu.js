@@ -21,7 +21,12 @@ Board.requestPort(function(error, port) {
       }
     });
 
-    // enable shock detection
+    // enable tap detection
     board.sysexCommand([CURIE_IMU, CURIE_IMU_TAP_DETECT, 1]);
+
+    setTimeout(function() {
+      console.log("Done.");
+      board.sysexCommand([CURIE_IMU, CURIE_IMU_TAP_DETECT, 0]);
+    }, 5000);
   });
 });
