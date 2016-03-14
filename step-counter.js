@@ -17,7 +17,7 @@ Board.requestPort(function(error, port) {
     board.sysexResponse(CURIE_IMU, function(data) {
       var subcommand = data.shift();
       if (subcommand === CURIE_IMU_STEP_COUNTER) {
-        console.log("CURIE_IMU_STEP_COUNTER", Board.decode(data));
+        console.log("CURIE_IMU_STEP_COUNTER", data);
       }
     });
 
@@ -26,6 +26,8 @@ Board.requestPort(function(error, port) {
 
     setTimeout(function() {
       console.log("Done.");
+
+      // disable step counting
       board.sysexCommand([CURIE_IMU, CURIE_IMU_STEP_COUNTER, 0]);
     }, 5000);
   });

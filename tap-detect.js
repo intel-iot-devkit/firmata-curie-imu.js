@@ -17,7 +17,7 @@ Board.requestPort(function(error, port) {
     board.sysexResponse(CURIE_IMU, function(data) {
       var subcommand = data.shift();
       if (subcommand === CURIE_IMU_TAP_DETECT) {
-        console.log("CURIE_IMU_TAP_DETECT", Board.decode(data));
+        console.log("CURIE_IMU_TAP_DETECT", data);
       }
     });
 
@@ -26,6 +26,8 @@ Board.requestPort(function(error, port) {
 
     setTimeout(function() {
       console.log("Done.");
+
+      // disable tap detection
       board.sysexCommand([CURIE_IMU, CURIE_IMU_TAP_DETECT, 0]);
     }, 5000);
   });
