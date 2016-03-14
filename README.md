@@ -11,7 +11,7 @@ Make sure you have the `simpleIMU.ino` sketch loaded on your Arduino101.
 ## Running
 
 ```
-node index.js
+node accel.js
 ```
 
 You should see output similar to the following:
