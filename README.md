@@ -1,4 +1,4 @@
-# FirmataCurieIMU example for JavaScript
+# FirmataCurieIMU examples for JavaScript
 
 ## Install
 
