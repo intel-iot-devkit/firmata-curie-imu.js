@@ -17,7 +17,7 @@ Board.requestPort(function(error, port) {
     board.sysexResponse(CURIE_IMU, function(data) {
       var subcommand = data.shift();
       if (subcommand === CURIE_IMU_STEP_COUNTER) {
-        console.log("CURIE_IMU_STEP_COUNTER", data);
+        console.log("CURIE_IMU_STEP_COUNTER", Board.decode(data));
       }
     });
 
