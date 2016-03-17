@@ -16,7 +16,7 @@
     "genuino101"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hybridgroup/firmata-curie-imu.js/issues"
   },
